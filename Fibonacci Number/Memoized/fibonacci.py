@@ -1,8 +1,9 @@
 def getFibonacciNumber(check,num):
-    if num < 2:
-        check[num] = num
-    if check[num] is None:
-        check[num] = getFibonacciNumber(check,num-1) + getFibonacciNumber(check,num-2)
+    if check[num] == None:
+        if num < 2:
+            check[num] = num
+        if check[num] is None:
+            check[num] = getFibonacciNumber(check,num-1) + getFibonacciNumber(check,num-2)
     return check[num]
 
 def main():
